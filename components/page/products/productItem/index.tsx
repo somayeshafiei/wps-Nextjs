@@ -1,9 +1,10 @@
 import { Product } from '@/interfaces';
 import Link from 'next/link';
+import React from 'react';
 interface Props {
   product: Product;
 }
-const Card = ({ product }: Props) => {
+const ProductItem = ({ product }: Props) => {
   return (
     <>
       <div className="flex flex-col max-w-sm col-span-12 md:col-span-6 lg:col-span-4 xl:col-span-3 border rounded-sm shadow-sm">
@@ -24,4 +25,5 @@ const Card = ({ product }: Props) => {
     </>
   );
 };
-export default Card;
+
+export default ProductItem;
