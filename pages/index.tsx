@@ -1,71 +1,19 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
-import { useEffect } from 'react';
-import axios from 'axios';
 import Layout from '@/components/kit/layout';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export default function Home() {
-  // useEffect(() => {
-  //   (async () => {
-  //     const res = await axios.get("/api/products/2");
-  //     console.log(res.data);
-  //   })();
-  // });
   return (
     <>
-      <Layout>
-        <div className="flex-1">home</div>
+      <Layout title="WELLCOME TO WEBSTYLEPRESS">
+        <div className="flex-1 px-20 py-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eligendi fuga accusantium quam ipsam pariatur natus, perspiciatis inventore non ad ea animi est nemo asperiores similique veritatis in, quisquam eum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae omnis officia a nemo neque fugiat cupiditate quasi doloremque earum, perspiciatis ipsam consequatur quo quos quidem veritatis atque aliquid dolor.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat numquam explicabo nesciunt praesentium cupiditate dicta, voluptatum nulla quidem vero hic quasi officia doloremque debitis quo quas iusto consequuntur aut!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur eligendi fuga accusantium quam ipsam pariatur natus, perspiciatis inventore non ad ea animi est nemo asperiores similique veritatis in, quisquam eum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis recusandae omnis officia a nemo neque fugiat cupiditate quasi doloremque earum, perspiciatis ipsam consequatur quo quos quidem veritatis atque aliquid dolor.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat numquam explicabo nesciunt praesentium cupiditate dicta, voluptatum nulla quidem vero hic quasi officia doloremque debitis quo quas iusto consequuntur aut!
+
+        </div>
       </Layout>
     </>
-    // <>
-    //   <h1>test</h1>
-    //   <button
-    //     onClick={async () => {
-    //       const res = await axios.get("/api/cart");
-    //       console.log(res.data);
-    //     }}
-    //   >
-    //     get
-    //   </button>
-    //   <button
-    //     onClick={async () => {
-    //       const res = await axios.post("/api/cart", { id: 2 });
-    //       console.log(res.data);
-    //     }}
-    //   >
-    //     post
-    //   </button>
-
-    //   <button
-    //     onClick={async () => {
-    //       const res = await axios.get("/api/hello");
-    //       console.log(res.data);
-    //     }}
-    //   >
-    //     getUSers
-    //   </button>
-    //   <button
-    //     onClick={async () => {
-    //       const res = await axios.put("/api/hello", {
-    //         id: 2,
-    //         name: "mamad",
-    //       });
-    //       console.log(res.data);
-    //     }}
-    //   >
-    //     edit user
-    //   </button>
-    // </>
   );
 }
-
-// export const getServerSideProps = () => {
-//   // ...
-//   process.env.NODE_ENV === "developement" ?
-//   "http://localhost:port/api/endpoint" :
-//   "felan.vercel.com"
-// }

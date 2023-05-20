@@ -1,19 +1,28 @@
-import React, { useEffect } from 'react';
+import Link from 'next/link';
+import React from 'react';
 
 interface Props {
-  pathName: string;
+  title?: string;
+  path?: string;
 }
 
-const BreadCrumb = ({ pathName }: Props) => {
-  console.log(pathName);
-  const splitedPath = pathName.split('/');
-  splitedPath[0] = 'Home';
-  const title = splitedPath[splitedPath.length - 1];
+const BreadCrumb = ({ title = '', path = '' }: Props) => {
+  const splitedPath = title.split('/');
+  // splitedPath[0] = 'Home';
+  // const titler = splitedPath[splitedPath.length - 1];
   return (
-    <div className="flex items-center justify-between w-full p-5 bg-gray-200">
-      <h2>{title ? title.charAt(0).toUpperCase() + title.slice(1) : 'Home'}</h2>
-      <div className="flex">
-        {pathName !== '/' && <span>{splitedPath.join('/')}</span>}
+    <div className="flex items-center justify-between w-full p-12 bg-gray-200">
+      <h2 className="text-3xl font-bold">
+        {/* {titler ? titler.charAt(0).toUpperCase() + titler.slice(1) : 'Home'} */}
+        {/* {title !== 'home'} */}
+        {path ? path : title !== '' && `${title}`}
+      </h2>
+      <div className="flex max-w-sm">
+        {title !== 'WELLCOME TO WEBSTYLEPRESS' && (
+          <span>
+            <Link href="/">Home</Link>/<span>{title}</span>
+          </span>
+        )}
       </div>
     </div>
   );

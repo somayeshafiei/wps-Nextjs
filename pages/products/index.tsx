@@ -11,12 +11,11 @@ interface Props {
 
 const Products = ({ products, error }: Props) => {
   return (
-    <Layout>
-      <div className="flex-1">
-        <h1>Products</h1>
-        <div className="grid grid-cols-12 gap-5">
+    <Layout title="Products">
+      <div className="flex-1 px-20 py-5">
+        <div className="grid grid-cols-12 gap-5 justify-items-center">
           {products?.map((product) => (
-            <ProductItem product={product} />
+            <ProductItem product={product} key={product.id} />
           ))}
         </div>
       </div>

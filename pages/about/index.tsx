@@ -3,7 +3,7 @@ import React from 'react';
 
 const About = () => {
   return (
-    <Layout>
+    <Layout title='About'>
       <div className="flex-1">About</div>
     </Layout>
   );

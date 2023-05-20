@@ -4,7 +4,7 @@ import React from 'react';
 const Posts = () => {
   return (
     <>
-      <Layout>
+      <Layout title='Posts'>
         <div className="flex-1">Posts</div>
       </Layout>
     </>
